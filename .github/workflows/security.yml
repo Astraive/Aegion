@@ -44,7 +44,7 @@ jobs:
           cache: true
 
       - name: Run gosec
-        uses: securego/gosec@v2.26.1
+        uses: securego/gosec@v2.27.1
         with:
           args: -no-fail -fmt sarif -out gosec-results.sarif ./...
 
@@ -56,7 +56,7 @@ jobs:
           sarif_file: gosec-results.sarif
 
       - name: Run gosec with failure on high severity
-        uses: securego/gosec@v2.26.1
+        uses: securego/gosec@v2.27.1
         with:
           args: -severity high -confidence high -exclude-generated ./...
 
@@ -156,7 +156,7 @@ jobs:
           persist-credentials: false
 
       - name: Dependency Review
-        uses: actions/dependency-review-action@v4.9.0
+        uses: actions/dependency-review-action@v5.0.0
         with:
           fail-on-severity: high
           deny-licenses: GPL-3.0, AGPL-3.0
@@ -175,7 +175,7 @@ jobs:
           persist-credentials: false
 
       - name: Run gitleaks
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
