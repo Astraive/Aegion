@@ -41,7 +41,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: '1.25.10'
           cache: true
@@ -82,7 +82,7 @@ jobs:
           persist-credentials: false
 
       - name: Run gosec
-        uses: securego/gosec@v2.27.1
+        uses: securego/gosec@v2.28.0
         with:
           args: -severity high -confidence high -exclude-generated ./modules/analytics/...
 
@@ -119,7 +119,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: ${{ matrix.go-version }}
           cache: true
@@ -207,7 +207,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: '1.25.10'
           cache: true
@@ -344,7 +344,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: '1.25.10'
           cache: true
