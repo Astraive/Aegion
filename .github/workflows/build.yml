@@ -52,7 +52,7 @@ jobs:
 
       - name: Log in to Container Registry
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v4
+        uses: docker/login-action@v4.5.2
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -132,7 +132,7 @@ jobs:
 
       - name: Log in to Container Registry
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v4
+        uses: docker/login-action@v4.5.2
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -187,7 +187,7 @@ jobs:
         id: image-prefix
         run: echo "image_prefix=${GITHUB_REPOSITORY,,}" >> $GITHUB_OUTPUT
       - name: Log in to Container Registry
-        uses: docker/login-action@v4
+        uses: docker/login-action@v4.5.2
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
