@@ -6,7 +6,7 @@ require (
 	github.com/aws/aws-sdk-go v1.55.8
 	github.com/beevik/etree v1.7.0
 	github.com/go-chi/chi/v5 v5.3.1
-	github.com/google/cel-go v0.29.2
+	github.com/google/cel-go v0.30.0
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v5 v5.10.0
 	github.com/marcboeker/go-duckdb v1.8.5
@@ -27,7 +27,7 @@ require (
 	google.golang.org/grpc v1.82.1
 	google.golang.org/protobuf v1.36.11
 	gopkg.in/yaml.v3 v3.0.1
-	modernc.org/sqlite v1.54.0
+	modernc.org/sqlite v1.55.0
 )
 
 require (
